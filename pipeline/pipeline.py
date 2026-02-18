@@ -9,6 +9,8 @@ df = pd.DataFrame({"Day": [1, 2], "Number of Passengers": [3, 4]})
 df['month'] = month
 print(df.head())
 
-df.to_parquet(f"output_{month}.parquet")
+output_file = f"output_{month}.parquet"
+df.to_parquet(output_file)
+print(f"Parquet file created: {output_file}")
 
 print(f'hello pipeline, month={month}')
